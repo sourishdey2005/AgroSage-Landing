@@ -6,6 +6,7 @@ import ImpactNumbers from "@/components/landing/impact-numbers";
 import HowItWorks from "@/components/landing/how-it-works";
 import BehindTheAI from "@/components/landing/behind-the-ai";
 import TechStack from "@/components/landing/tech-stack";
+import Team from "@/components/landing/team";
 import Cta from "@/components/landing/cta";
 import Footer from "@/components/landing/footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <HowItWorks />
         <BehindTheAI />
         <TechStack />
+        <Team />
         <Cta />
       </main>
       <Footer />
