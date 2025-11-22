@@ -1,7 +1,7 @@
 "use client"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Bar, BarChart, CartesianGrid, XAxis, ResponsiveContainer, Tooltip } from 'recharts';
-import { ChartTooltipContent } from "@/components/ui/chart";
+import { ChartContainer, ChartTooltipContent } from "@/components/ui/chart";
 import { Database, LineChart, MapPin, Store } from "lucide-react";
 
 const chartData = [
@@ -12,6 +12,13 @@ const chartData = [
   { month: 'May', yield: 209 },
   { month: 'Jun', yield: 214 },
 ];
+
+const chartConfig = {
+  yield: {
+    label: "Yield",
+    color: "hsl(var(--primary))",
+  },
+};
 
 const dataPoints = [
   {
@@ -70,23 +77,25 @@ export default function DataEngine() {
               </CardHeader>
               <CardContent>
                 <div className="h-[300px] w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={chartData}>
-                    <CartesianGrid vertical={false} strokeDasharray="3 3" />
-                    <XAxis
-                      dataKey="month"
-                      stroke="hsl(var(--muted-foreground))"
-                      fontSize={12}
-                      tickLine={false}
-                      axisLine={false}
-                    />
-                    <Tooltip
-                        cursor={{fill: 'hsl(var(--accent) / 0.3)'}}
-                        content={<ChartTooltipContent />}
-                     />
-                    <Bar dataKey="yield" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
-                  </BarChart>
+                <ChartContainer config={chartConfig} className="h-full w-full">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={chartData}>
+                      <CartesianGrid vertical={false} strokeDasharray="3 3" />
+                      <XAxis
+                        dataKey="month"
+                        stroke="hsl(var(--muted-foreground))"
+                        fontSize={12}
+                        tickLine={false}
+                        axisLine={false}
+                      />
+                      <Tooltip
+                          cursor={{fill: 'hsl(var(--accent) / 0.3)'}}
+                          content={<ChartTooltipContent />}
+                      />
+                      <Bar dataKey="yield" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
+                    </BarChart>
                   </ResponsiveContainer>
+                </ChartContainer>
                 </div>
               </CardContent>
             </Card>
