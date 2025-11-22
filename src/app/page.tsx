@@ -2,10 +2,9 @@ import Navigation from "@/components/landing/navigation";
 import Hero from "@/components/landing/hero";
 import WhoWeServe from "@/components/landing/who-we-serve";
 import KeyFeatures from "@/components/landing/key-features";
-import DashboardPreviews from "@/components/landing/dashboard-previews";
-import WhyAgroSage from "@/components/landing/why-agrosage";
-import Testimonials from "@/components/landing/testimonials";
-import DataEngine from "@/components/landing/data-engine";
+import ImpactNumbers from "@/components/landing/impact-numbers";
+import HowItWorks from "@/components/landing/how-it-works";
+import BehindTheAI from "@/components/landing/behind-the-ai";
 import Cta from "@/components/landing/cta";
 import Footer from "@/components/landing/footer";
 
@@ -17,10 +16,9 @@ export default function Home() {
         <Hero />
         <WhoWeServe />
         <KeyFeatures />
-        <DashboardPreviews />
-        <WhyAgroSage />
-        <Testimonials />
-        <DataEngine />
+        <ImpactNumbers />
+        <HowItWorks />
+        <BehindTheAI />
         <Cta />
       </main>
       <Footer />

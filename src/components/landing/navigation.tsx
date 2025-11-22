@@ -15,8 +15,8 @@ import {
 const menuItems = [
   { name: 'Home', href: '#home' },
   { name: 'Features', href: '#features' },
-  { name: 'Dashboards', href: '#dashboards' },
-  { name: 'Data Engine', href: '#data-engine' },
+  { name: 'Impact', href: '#impact' },
+  { name: 'Technology', href: '#technology' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -36,14 +36,14 @@ export default function Navigation() {
     <header
       className={cn(
         'sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm transition-shadow',
-        hasScrolled ? 'shadow-md' : ''
+        hasScrolled ? 'shadow-md shadow-black/10' : ''
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between">
         <Link href="#home">
           <Logo />
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {menuItems.map((item) => (
             <Link
               key={item.name}
@@ -56,7 +56,7 @@ export default function Navigation() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <Button
-            className="rounded-full bg-gradient-to-r from-primary to-green-700 font-bold text-primary-foreground"
+            className="rounded-full bg-primary font-bold text-primary-foreground"
           >
             Get Started
           </Button>
@@ -92,7 +92,7 @@ export default function Navigation() {
                 </nav>
                 <Button
                   size="lg"
-                  className="mt-8 w-full rounded-full bg-gradient-to-r from-primary to-green-700 font-bold text-primary-foreground"
+                  className="mt-8 w-full rounded-full bg-primary font-bold text-primary-foreground"
                 >
                   Get Started
                 </Button>

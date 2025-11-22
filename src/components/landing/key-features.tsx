@@ -1,70 +1,62 @@
-import { BrainCircuit, Map, TrendingUp, CloudSun, ShieldCheck, Receipt, Warehouse, Sparkles } from "lucide-react";
+import { BrainCircuit, Map, TrendingUp, CloudSun, ShieldCheck, Receipt } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const features = [
   {
     icon: BrainCircuit,
     title: "AI Yield Predictor",
-    description: "Forecast crop yields with 95% accuracy.",
+    description: "Forecast crop yields with over 95% accuracy using machine learning.",
   },
   {
     icon: Map,
     title: "Satellite Crop Health",
-    description: "Monitor crop health in real-time via satellite.",
+    description: "Monitor crop health and stress levels in real-time with satellite imagery.",
   },
   {
     icon: TrendingUp,
     title: "Market Price Forecasting",
-    description: "Predict mandi prices to sell at the right time.",
+    description: "Predict mandi prices to help farmers sell at the optimal time.",
   },
   {
     icon: CloudSun,
-    title: "Real-Time Weather",
-    description: "Get hyper-local weather alerts and advisories.",
+    title: "Real-Time Weather Alerts",
+    description: "Get hyper-local weather alerts and advisories to protect your crops.",
   },
   {
     icon: ShieldCheck,
-    title: "Loan & Credit Risk",
-    description: "AI-powered risk engine for financial institutions.",
+    title: "Loan & Credit Risk Engine",
+    description: "Assess creditworthiness of farmers using alternative data points.",
   },
   {
     icon: Receipt,
-    title: "Subsidy Tracking",
-    description: "Transparently track subsidy disbursement.",
-  },
-  {
-    icon: Warehouse,
-    title: "Mandi Intelligence",
-    description: "Analyze arrivals and price trends across mandis.",
-  },
-  {
-    icon: Sparkles,
-    title: "Smart Recommendations",
-    description: "Personalized advice for irrigation and pests.",
+    title: "Subsidy Tracking System",
+    description: "A transparent system for government to manage and disburse subsidies.",
   },
 ];
 
 export default function KeyFeatures() {
   return (
-    <section id="features" className="bg-secondary/30">
+    <section id="features" className="bg-background">
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Flagship Features
           </h2>
           <p className="mt-4 font-body text-lg text-muted-foreground">
-            Harness the power of data and AI for smarter agriculture.
+            Unlock the power of data with our advanced agricultural tools.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <Card key={index} className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-card hover:shadow-xl">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <feature.icon className="h-8 w-8 text-primary transition-transform duration-300 group-hover:scale-110" />
+            <Card key={index} className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-card/75 hover:shadow-xl hover:shadow-primary/10">
+              <CardContent className="flex items-start gap-4 p-6">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <feature.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-headline text-lg font-bold">{feature.title}</h3>
-                <p className="mt-2 font-body text-sm text-muted-foreground">{feature.description}</p>
+                <div>
+                  <h3 className="font-headline text-lg font-bold">{feature.title}</h3>
+                  <p className="mt-2 font-body text-sm text-muted-foreground">{feature.description}</p>
+                </div>
               </CardContent>
             </Card>
           ))}

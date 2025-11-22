@@ -1,26 +1,26 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tractor, ClipboardList, Landmark, Building } from "lucide-react";
+import { Leaf, Users, Landmark, Building } from "lucide-react";
 
 const services = [
   {
-    icon: <Tractor className="h-10 w-10 text-primary" />,
+    icon: <Leaf className="h-8 w-8 text-primary" />,
     title: "Farmers",
-    description: "Crop guidance, real-time weather insights, and AI-driven yield forecasts to maximize your harvest.",
+    description: "Crop guidance, weather insights, and AI-powered yield forecasts to maximize output.",
   },
   {
-    icon: <ClipboardList className="h-10 w-10 text-primary" />,
-    title: "Agents",
-    description: "Digital field survey tools, streamlined farmer onboarding, and performance tracking.",
+    icon: <Users className="h-8 w-8 text-primary" />,
+    title: "Field Agents",
+    description: "Efficient field survey tools, digital farmer onboarding, and real-time data collection.",
   },
   {
-    icon: <Landmark className="h-10 w-10 text-primary" />,
+    icon: <Landmark className="h-8 w-8 text-primary" />,
     title: "Banks",
-    description: "Advanced loan risk prediction, agricultural credit insights, and portfolio monitoring.",
+    description: "Accurate loan risk prediction, data-driven credit insights, and portfolio monitoring.",
   },
   {
-    icon: <Building className="h-10 w-10 text-primary" />,
+    icon: <Building className="h-8 w-8 text-primary" />,
     title: "Government",
-    description: "Policy impact analytics, subsidy distribution tracking, and satellite-based regional monitoring.",
+    description: "Policy impact analytics, subsidy-based monitoring, and supply management.",
   },
 ];
 
@@ -33,14 +33,14 @@ export default function WhoWeServe() {
             Who We Serve
           </h2>
           <p className="mt-4 font-body text-lg text-muted-foreground">
-            A unified platform connecting every stakeholder in agriculture.
+            Tailored solutions for every stakeholder in the agricultural ecosystem.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
-            <Card key={index} className="group transform text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+            <Card key={index} className="group transform border-border/50 bg-card/50 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:bg-card/75 hover:shadow-2xl hover:shadow-primary/10">
               <CardHeader className="items-center">
-                <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-accent/30 transition-colors group-hover:bg-accent">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/20">
                   {service.icon}
                 </div>
                 <CardTitle className="font-headline text-2xl font-bold">{service.title}</CardTitle>

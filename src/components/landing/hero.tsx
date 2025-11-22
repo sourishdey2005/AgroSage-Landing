@@ -6,11 +6,12 @@ import { PlayCircle, Rocket } from "lucide-react";
 export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-background pt-16 md:pt-24 lg:pt-32">
-       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/20 via-background to-background"></div>
+       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-black/90 opacity-80"></div>
+       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,hsl(var(--primary)/0.1),transparent_50%)]"></div>
       <div className="container relative z-10 mx-auto">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <Badge variant="outline" className="mb-4 border-primary/50 bg-primary/10 text-primary animate-fade-in">
+            <Badge variant="secondary" className="mb-4 animate-fade-in rounded-lg bg-white/10 py-1 text-sm font-normal text-white backdrop-blur-sm">
               Trusted by 50,000+ Farmers
             </Badge>
             <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -20,11 +21,10 @@ export default function Hero() {
               AI-powered insights for Farmers, Banks, Agents & Government.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <Button size="lg" className="rounded-full bg-gradient-to-r from-primary to-green-700 font-bold text-primary-foreground shadow-lg hover:shadow-xl transition-shadow">
-                <Rocket className="mr-2 h-5 w-5" />
+              <Button size="lg" className="rounded-full bg-primary font-bold text-primary-foreground shadow-lg shadow-primary/30 transition-shadow hover:shadow-xl hover:shadow-primary/40">
                 Start Exploring
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full bg-background/50 backdrop-blur-sm">
+              <Button size="lg" variant="outline" className="rounded-full border-white/30 bg-transparent text-white backdrop-blur-sm hover:bg-white/10 hover:text-white">
                 <PlayCircle className="mr-2 h-5 w-5" />
                 Watch Demo
               </Button>

@@ -1,19 +1,12 @@
 import Link from "next/link";
 import Logo from "@/components/logo";
 import { Separator } from "@/components/ui/separator";
-import { Linkedin, Twitter, Facebook } from "lucide-react";
-
-const socialLinks = [
-  { icon: Twitter, href: "#" },
-  { icon: Linkedin, href: "#" },
-  { icon: Facebook, href: "#" },
-];
 
 const footerLinks = {
   Product: [
     { name: "Features", href: "#features" },
-    { name: "Dashboards", href: "#dashboards" },
-    { name: "Data Engine", href: "#data-engine" },
+    { name: "Impact", href: "#impact" },
+    { name: "Technology", href: "#technology" },
   ],
   Support: [
     { name: "Contact", href: "#contact" },
@@ -34,15 +27,8 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-2">
             <Logo />
             <p className="mt-4 font-body text-muted-foreground">
-              Building India’s Agricultural Future.
+              Building India’s Agricultural Future with data-driven intelligence.
             </p>
-            <div className="mt-6 flex gap-4">
-              {socialLinks.map((social, index) => (
-                <Link key={index} href={social.href}>
-                  <social.icon className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
-                </Link>
-              ))}
-            </div>
           </div>
 
           {Object.entries(footerLinks).map(([title, links]) => (
