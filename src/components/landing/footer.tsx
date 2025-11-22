@@ -10,12 +10,12 @@ const footerLinks = {
   ],
   Support: [
     { name: "Contact", href: "#contact" },
-    { name: "Help Center", href: "#" },
-    { name: "API Docs", href: "#" },
+    { name: "Help Center", href: "/help-center" },
+    { name: "API Docs", href: "/api-docs" },
   ],
   Legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Service", href: "/terms-of-service" },
   ],
 };
 
