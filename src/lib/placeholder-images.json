@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "farmer-dashboard",
+      "description": "A preview of the AgroSage Farmer Dashboard showing crop health and weather widgets.",
+      "imageUrl": "https://images.unsplash.com/photo-1748609160056-7b95f30041f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXNoYm9hcmQlMjBjaGFydHxlbnwwfHx8fDE3NjM3NTkyMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard chart"
+    },
+    {
+      "id": "agent-dashboard",
+      "description": "A preview of the AgroSage Agent Dashboard with a field survey map.",
+      "imageUrl": "https://images.unsplash.com/photo-1627196210530-efa8571d2ded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkYXNoYm9hcmQlMjBtYXB8ZW58MHx8fHwxNzYzNzMwNjIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard map"
+    },
+    {
+      "id": "bank-dashboard",
+      "description": "A preview of the AgroSage Bank Dashboard displaying a loan risk heatmap.",
+      "imageUrl": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXNoYm9hcmQlMjBkYXRhfGVufDB8fHx8MTc2Mzc2MjI4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard data"
+    },
+    {
+      "id": "gov-dashboard",
+      "description": "A preview of the AgroSage Government Dashboard for satellite and policy analytics.",
+      "imageUrl": "https://images.unsplash.com/photo-1655602995307-a5da7738a0c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXNoYm9hcmQlMjBzYXRlbGxpdGV8ZW58MHx8fHwxNzYzODQzNjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard satellite"
+    },
+    {
+      "id": "testimonial-farmer",
+      "description": "Portrait of a happy farmer from Punjab.",
+      "imageUrl": "https://images.unsplash.com/photo-1622012897915-6310141e6a19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYW4lMjBmYXJtZXJ8ZW58MHx8fHwxNzYzNzUyOTU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man farmer"
+    },
+    {
+      "id": "testimonial-officer",
+      "description": "Portrait of an agriculture officer from Karnataka.",
+      "imageUrl": "https://images.unsplash.com/photo-1759872993896-02847b70badf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMG9mZmljaWFsfGVufDB8fHx8MTc2Mzg0MzY5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman official"
+    },
+    {
+      "id": "testimonial-manager",
+      "description": "Portrait of a bank manager.",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBzdWl0fGVufDB8fHx8MTc2Mzg0MzY5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man suit"
+    },
+    {
+      "id": "testimonial-agent",
+      "description": "Portrait of an agri agent from Maharashtra.",
+      "imageUrl": "https://images.unsplash.com/photo-1627161683077-e34782c24d81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMGFnZW50fGVufDB8fHx8MTc2Mzg0MzY5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman agent"
+    }
+  ]
 }
