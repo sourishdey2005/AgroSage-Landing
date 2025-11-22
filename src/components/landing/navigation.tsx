@@ -56,9 +56,12 @@ export default function Navigation() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <Button
+            asChild
             className="rounded-full bg-primary font-bold text-primary-foreground"
           >
-            Get Started
+            <Link href="https://agro-wise-sigma.vercel.app/login" target="_blank" rel="noopener noreferrer">
+              Get Started
+            </Link>
           </Button>
         </div>
         <div className="md:hidden">
@@ -91,10 +94,13 @@ export default function Navigation() {
                   ))}
                 </nav>
                 <Button
+                  asChild
                   size="lg"
                   className="mt-8 w-full rounded-full bg-primary font-bold text-primary-foreground"
                 >
-                  Get Started
+                  <Link href="https://agro-wise-sigma.vercel.app/login" target="_blank" rel="noopener noreferrer">
+                    Get Started
+                  </Link>
                 </Button>
               </div>
             </SheetContent>

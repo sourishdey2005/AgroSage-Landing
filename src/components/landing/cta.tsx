@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Cta() {
   return (
@@ -15,11 +16,14 @@ export default function Cta() {
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button
+            asChild
             size="lg"
             variant="outline"
             className="h-14 rounded-full border-2 border-primary-foreground bg-white px-10 text-lg font-bold text-primary transition-colors hover:bg-transparent hover:text-primary-foreground"
           >
-            Join AgroSage
+            <Link href="https://agro-wise-sigma.vercel.app/login" target="_blank" rel="noopener noreferrer">
+              Join AgroSage
+            </Link>
           </Button>
           <p className="text-sm text-white/70">Free for Farmers • Secure for Banks • Verified for Government</p>
         </div>

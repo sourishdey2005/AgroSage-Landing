@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import IndiaMap from "./india-map";
-import { PlayCircle, Rocket } from "lucide-react";
+import { PlayCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -21,8 +22,10 @@ export default function Hero() {
               AI-powered insights for Farmers, Banks, Agents & Government.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <Button size="lg" className="rounded-full bg-primary font-bold text-primary-foreground shadow-lg shadow-primary/30 transition-shadow hover:shadow-xl hover:shadow-primary/40">
-                Start Exploring
+              <Button asChild size="lg" className="rounded-full bg-primary font-bold text-primary-foreground shadow-lg shadow-primary/30 transition-shadow hover:shadow-xl hover:shadow-primary/40">
+                <Link href="https://agro-wise-sigma.vercel.app/login" target="_blank" rel="noopener noreferrer">
+                  Start Exploring
+                </Link>
               </Button>
               <Button size="lg" variant="outline" className="rounded-full border-white/30 bg-transparent text-white backdrop-blur-sm hover:bg-white/10 hover:text-white">
                 <PlayCircle className="mr-2 h-5 w-5" />
