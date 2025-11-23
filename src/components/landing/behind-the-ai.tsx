@@ -32,7 +32,7 @@ export default function BehindTheAI() {
             <div className="absolute inset-0 bg-gradient-to-br from-light-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
             <div className="relative">
               <span className="material-symbols-outlined text-5xl text-light-green">security</span>
-              <h3 className="mt-4 text-lg font-bold text-white">Blockchain</h3>
+              <h3 className="mt-4 text-lg font-bold text-white">Secure GenAI</h3>
             </div>
           </div>
         </div>

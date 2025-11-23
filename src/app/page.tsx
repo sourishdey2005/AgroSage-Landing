@@ -5,6 +5,7 @@ import KeyFeatures from "@/components/landing/key-features";
 import ImpactNumbers from "@/components/landing/impact-numbers";
 import HowItWorks from "@/components/landing/how-it-works";
 import BehindTheAI from "@/components/landing/behind-the-ai";
+import AIModels from "@/components/landing/ai-models";
 import TechStack from "@/components/landing/tech-stack";
 import Team from "@/components/landing/team";
 import Cta from "@/components/landing/cta";
@@ -24,6 +25,7 @@ export default function Home() {
         <HowItWorks />
         <DataEngine />
         <BehindTheAI />
+        <AIModels />
         <TechStack />
         <Testimonials />
         <Team />
