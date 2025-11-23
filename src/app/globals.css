@@ -69,6 +69,7 @@
       background-image:
           radial-gradient(circle at 1px 1px, rgba(46, 125, 50, 0.1) 1px, transparent 0);
       background-size: 20px 20px;
+      animation: move-bg 10s linear infinite;
   }
   .dark .bg-pattern {
       background-image:
@@ -154,4 +155,15 @@
   .details-content > div {
       overflow: hidden;
   }
+}
+
+@layer utilities {
+    @keyframes move-bg {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 20px 20px;
+        }
+    }
 }
