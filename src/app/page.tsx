@@ -9,6 +9,8 @@ import TechStack from "@/components/landing/tech-stack";
 import Team from "@/components/landing/team";
 import Cta from "@/components/landing/cta";
 import Footer from "@/components/landing/footer";
+import DataEngine from "@/components/landing/data-engine";
+import Testimonials from "@/components/landing/testimonials";
 
 export default function Home() {
   return (
@@ -20,8 +22,10 @@ export default function Home() {
         <KeyFeatures />
         <ImpactNumbers />
         <HowItWorks />
+        <DataEngine />
         <BehindTheAI />
         <TechStack />
+        <Testimonials />
         <Team />
         <Cta />
       </main>
