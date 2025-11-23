@@ -1,44 +1,40 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { BrainCircuit, Database, ShieldCheck, Box } from "lucide-react";
-
-const technologies = [
-  {
-    icon: <BrainCircuit className="h-8 w-8" />,
-    name: "Geospatial AI"
-  },
-  {
-    icon: <Box className="h-8 w-8" />,
-    name: "Neural Networks"
-  },
-  {
-    icon: <Database className="h-8 w-8" />,
-    name: "Big Data Pipelines"
-  },
-  {
-    icon: <ShieldCheck className="h-8 w-8" />,
-    name: "Blockchain"
-  }
-];
-
 export default function BehindTheAI() {
   return (
-    <section id="technology" className="bg-background">
-      <div className="container mx-auto text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-          Behind the AI
-        </h2>
-        <p className="mt-4 font-body text-lg text-muted-foreground">
-          Powered by a robust, scalable, and cutting-edge technology stack.
-        </p>
-        <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
-          {technologies.map((tech) => (
-            <Card key={tech.name} className="border-border/50 bg-card/50 p-6 transition-colors hover:border-primary/50 hover:bg-card/75">
-              <CardContent className="flex flex-col items-center justify-center gap-4">
-                <div className="text-primary">{tech.icon}</div>
-                <p className="font-semibold text-foreground">{tech.name}</p>
-              </CardContent>
-            </Card>
-          ))}
+    <section className="py-24 bg-deep-grey dark:bg-background-dark overflow-hidden">
+      <div className="container mx-auto max-w-7xl px-4 text-center">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading text-white">Behind the AI</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-white/60 font-soft">Powered by a robust, scalable, and cutting-edge technology stack.</p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="relative tech-card group flex flex-col items-center justify-center p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-light-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+            <div className="relative">
+              <span className="material-symbols-outlined text-5xl text-light-green">layers</span>
+              <h3 className="mt-4 text-lg font-bold text-white">Geospatial AI</h3>
+            </div>
+          </div>
+          <div className="relative tech-card group flex flex-col items-center justify-center p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-light-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+            <div className="relative">
+              <span className="material-symbols-outlined text-5xl text-light-green">hub</span>
+              <h3 className="mt-4 text-lg font-bold text-white">Neural Networks</h3>
+            </div>
+          </div>
+          <div className="relative tech-card group flex flex-col items-center justify-center p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-light-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+            <div className="relative">
+              <span className="material-symbols-outlined text-5xl text-light-green">deployed_code</span>
+              <h3 className="mt-4 text-lg font-bold text-white">Big Data Pipelines</h3>
+            </div>
+          </div>
+          <div className="relative tech-card group flex flex-col items-center justify-center p-6 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-light-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+            <div className="relative">
+              <span className="material-symbols-outlined text-5xl text-light-green">security</span>
+              <h3 className="mt-4 text-lg font-bold text-white">Blockchain</h3>
+            </div>
+          </div>
         </div>
       </div>
     </section>

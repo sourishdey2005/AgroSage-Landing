@@ -12,9 +12,9 @@ import Footer from "@/components/landing/footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <>
       <Navigation />
-      <main className="flex-1">
+      <main>
         <Hero />
         <WhoWeServe />
         <KeyFeatures />
@@ -26,6 +26,6 @@ export default function Home() {
         <Cta />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

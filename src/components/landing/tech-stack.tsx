@@ -1,144 +1,187 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const techStack = [
-    {
-        title: "Artificial Intelligence & Machine Learning Stack",
-        stacks: [
-            {
-                name: "ML Core",
-                items: ["Python 3.11", "TensorFlow 2.16 / PyTorch 2.4", "scikit-learn", "XGBoost / LightGBM", "CatBoost", "HuggingFace Transformers"],
-            },
-            {
-                name: "Advanced Models Used",
-                items: ["Yield Prediction Models", "Crop Health Classification (CNN/ViT)", "Market Price Forecasting (LSTM, Temporal Fusion Transformer)", "Weather Prediction Models (Hybrid CNN-LSTM)", "Loan Credit Risk Models (Gradient Boosting + DeepTabular)", "Farmer Fraud Detection (Isolation Forest + Autoencoders)", "Satellite NDVI/NDWI Segmentation (U-Net / SegFormer)"],
-            },
-            {
-                name: "Computer Vision for Satellite & Drone Data",
-                items: ["Google Earth Engine API", "Rasterio / GDAL", "OpenCV", "SegFormer / U-Net++", "YOLOv10 for Crop & Pest Detection"],
-            },
-            {
-                name: "Time Series & Forecasting",
-                items: ["NeuralProphet", "Darts", "ARIMA / SARIMAX", "Temporal Fusion Transformers (TFT)"],
-            },
-            {
-                name: "ML Serving & Pipelines",
-                items: ["FastAPI ML microservices", "TorchServe", "TensorFlow Serving", "ONNX Runtime", "Ray Serve (scaling ML inference)", "MLFlow for experiment tracking"],
-            },
-        ],
-    },
-    {
-        title: "Data Engineering / Big Data Stack",
-        stacks: [
-            { name: "Data Lake + Warehousing", items: ["Supabase Storage + Postgres (primary)", "DuckDB for local analytical queries", "ClickHouse for high-speed big-query analytics", "Apache Iceberg / Delta Lake (optional for scale)"] },
-            { name: "ETL / Pipelines", items: ["Apache Airflow", "Dagster", "Prefect (great for modular flows)"] },
-            { name: "Real-time Streaming", items: ["Kafka or Redpanda", "Supabase Realtime", "WebSocket streams"] },
-            { name: "Satellite Processing Pipelines", items: ["Google Earth Engine", "SentinelHub API", "MODIS / Landsat Processors", "AWS Open Data Registry → Sentinel S3 buckets"] },
-        ],
-    },
-    {
-        title: "Backend Tech Stack",
-        stacks: [
-            { name: "Primary Backend", items: ["Node.js 20 (High-performance APIs)", "FastAPI (Python) for ML endpoints", "GoLang Microservices for high-speed tasks"] },
-            { name: "Database", items: ["Supabase Postgres (Main DB)", "TimescaleDB (Time-series weather/agri data)", "Redis (Caching + Realtime events)", "ElasticSearch (Search engine)", "Neon Postgres (Optional serverless DB)"] },
-            { name: "Authentication & Authorisation", items: ["Supabase Auth", "Role-based Access (Farmer / Agent / Bank / Government)", "JWT", "Row-Level Security (RLS)"] },
-            { name: "Storage", items: ["Supabase Storage (Docs, images, farm reports)", "AWS S3 Satellite Tiles", "CDN via Cloudflare"] },
-            { name: "APIs", items: ["GraphQL via Hasura", "REST via FastAPI / Node", "gRPC between microservices"] },
-        ]
-    },
-    {
-        title: "Front-End / UX Stack",
-        stacks: [
-            { name: "Web App", items: ["Next.js 15 (App Router)", "React 19", "TailwindCSS 4", "ShadCN/UI", "Framer Motion (animations)", "Recharts / Apache ECharts", "Mapbox GL (interactive farm maps)", "three.js (3D India map)"] },
-            { name: "Advanced UI", items: ["React Query + Zustand (state management)", "SWR for data caching", "TanStack Table for big analytics grids"] },
-            { name: "Mobile App", items: ["React Native", "OR", "Flutter 3.22", "(Choose React Native for shared components with web.)"] },
-        ]
-    },
-    {
-        title: "GIS, Maps & Geo-Analytics Stack",
-        stacks: [
-            { name: "GIS Libraries/Tools", items: ["Mapbox GL JS", "Leaflet", "Turf.js", "Google Maps Elevation API", "QGIS for internal agronomist use", "GeoPandas", "Shapely", "Sentinel NDVI Indexing Scripts"] },
-            { name: "GIS supports", items: ["NDVI", "NDWI", "EVI", "Soil moisture layers", "Crop health segmentation overlays"] },
-        ]
-    },
-    {
-        title: "DevOps / Cloud / Deployment Stack",
-        stacks: [
-            { name: "Cloud Platform", items: ["AWS (recommended)", "EC2", "Lambda", "S3", "ECR", "ECS / Fargate", "CloudWatch", "API Gateway", "Or DigitalOcean if budget smaller."] },
-            { name: "CI/CD", items: ["GitHub Actions", "Supabase Deploy Hooks", "Docker for microservices"] },
-            { name: "Containerisation", items: ["Docker", "Kubernetes (EKS)", "Helm Charts"] },
-            { name: "Monitoring", items: ["Prometheus", "Grafana Dashboards", "OpenTelemetry"] },
-        ]
-    },
-    {
-        title: "Security Stack",
-        stacks: [
-            { name: "Security Measures", items: ["Supabase Row-Level Security (core)", "JWT + OAuth2", "Rate limiting with Nginx", "AES-256 encryption for stored data", "WAF via Cloudflare", "Real-time log monitoring (ELK stack)"] },
-            { name: "Compliance", items: ["ISO 27001-ready architecture", "Government-grade role separation"] },
-        ]
-    },
-    {
-        title: "Visualisation + BI Stack",
-        stacks: [
-            { name: "Libraries & Tools", items: ["Apache ECharts", "D3.js", "Metabase (internal)", "Grafana", "Kepler.gl (geo-spatial visualisation)"] },
-        ]
-    },
-    {
-        title: "External Integrations",
-        stacks: [
-            { name: "Satellite Providers", items: ["ISRO Bhuvan", "Sentinel", "Landsat", "MODIS"] },
-            { name: "Weather Data", items: ["IMD", "OpenWeatherMap", "Tomorrow.io"] },
-            { name: "Market Data", items: ["AgMarkNet", "APMC APIs"] },
-            { name: "Financial Integrations", items: ["Bank APIs (PSB, SBI, ICICI)", "Aadhaar eKYC (if allowed)", "Crop Insurance APIs"] },
-        ]
-    },
-    {
-        title: "Microservices Architecture",
-        stacks: [
-            { name: "Services", items: ["Yield Prediction Service (Python + ML)", "Pricing Forecast Service (TFT)", "Weather Analytics Service", "Satellite Data Service (Earth Engine)", "Credit Risk Engine (XGBoost + Deep Tabular)", "Government Policy AI Insights Service", "Agent Field Verification Service", "Notification Service (SMS/WhatsApp)", "Real-Time Map Service (Node + Mapbox)"] },
-            { name: "Event Bus", items: ["Kafka/Redpanda internal communication"] },
-        ]
-    }
-];
-
 export default function TechStack() {
-    return (
-        <section id="tech-stack" className="bg-muted">
-            <div className="container mx-auto">
-                <div className="mb-12 text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-                        Our Technology Stack
-                    </h2>
-                    <p className="mt-4 font-body text-lg text-muted-foreground">
-                        The powerful and scalable technologies that drive AgroSage.
-                    </p>
-                </div>
-                <Accordion type="single" collapsible className="w-full">
-                    {techStack.map((category, index) => (
-                        <AccordionItem value={`item-${index}`} key={index}>
-                            <AccordionTrigger className="font-headline text-xl">{category.title}</AccordionTrigger>
-                            <AccordionContent>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
-                                {category.stacks.map((stack, stackIndex) => (
-                                    <Card key={stackIndex} className="bg-background/50">
-                                        <CardHeader>
-                                            <CardTitle className="font-body text-lg font-semibold">{stack.name}</CardTitle>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                                                {stack.items.map((item, itemIndex) => (
-                                                    <li key={itemIndex}>{item}</li>
-                                                ))}
-                                            </ul>
-                                        </CardContent>
-                                    </Card>
-                                ))}
-                                </div>
-                            </AccordionContent>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
+  return (
+    <section className="py-24 bg-background-light dark:bg-black/20">
+      <div className="container mx-auto max-w-5xl px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading text-deep-grey dark:text-white">Tech Stack</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-deep-grey/70 dark:text-white/60 font-soft">(2025-ready, scalable, AI-powered)</p>
+        </div>
+        <div className="space-y-4">
+          <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+            <summary className="flex items-center justify-between cursor-pointer p-6">
+              <div className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">psychology</span>
+                <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Artificial Intelligence & Machine Learning</h3>
+              </div>
+              <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+            </summary>
+            <div className="details-content">
+              <div className="px-6 pb-6 pt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 text-left">
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">ML Core</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Python, Scikit-learn, TensorFlow, PyTorch</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Advanced Models</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">XGBoost, LSTM, Transformer Networks</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Computer Vision</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">OpenCV, CNNs, YOLO for satellite & drone data</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Time Series & Forecasting</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Prophet, ARIMA</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">ML Serving & Pipelines</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Kubeflow, MLflow, Seldon Core</p></div>
+              </div>
             </div>
-        </section>
-    );
+          </details>
+          <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+            <summary className="flex items-center justify-between cursor-pointer p-6">
+              <div className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">database</span>
+                <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Data Engineering / Big Data</h3>
+              </div>
+              <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+            </summary>
+            <div className="details-content">
+              <div className="px-6 pb-6 pt-0 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-left">
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Data Lake + Warehousing</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">AWS S3, Google Cloud Storage, BigQuery, Snowflake</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">ETL / Pipelines</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Apache Airflow, Apache Spark, dbt</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Real-time Streaming</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Kafka, Spark Streaming, Flink</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Satellite Processing</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">GDAL, Rasterio, Dask for parallel processing</p></div>
+              </div>
+            </div>
+          </details>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+              <summary className="flex items-center justify-between cursor-pointer p-6">
+                <div className="flex items-center gap-4">
+                  <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">dns</span>
+                  <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Backend</h3>
+                </div>
+                <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+              </summary>
+              <div className="details-content">
+                <div className="px-6 pb-6 pt-0 space-y-4 text-left">
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Primary Backend</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Node.js (TypeScript), Go, Python (FastAPI)</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Database</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">PostgreSQL + PostGIS, ClickHouse, Redis</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Authentication</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Supabase Auth, JWT</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Storage</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">AWS S3, Cloudflare R2</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">APIs</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">REST, GraphQL, gRPC</p></div>
+                </div>
+              </div>
+            </details>
+            <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+              <summary className="flex items-center justify-between cursor-pointer p-6">
+                <div className="flex items-center gap-4">
+                  <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">devices</span>
+                  <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Front-End / UX</h3>
+                </div>
+                <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+              </summary>
+              <div className="details-content">
+                <div className="px-6 pb-6 pt-0 space-y-4 text-left">
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Web App</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Next.js, Tailwind CSS, TypeScript</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Mobile App</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">React Native (shared components for iOS & Android)</p></div>
+                </div>
+              </div>
+            </details>
+          </div>
+          <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+            <summary className="flex items-center justify-between cursor-pointer p-6">
+              <div className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">public</span>
+                <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">GIS, Maps & Geo-Analytics</h3>
+              </div>
+              <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+            </summary>
+            <div className="details-content">
+              <div className="px-6 pb-6 pt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 text-left">
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Mapping Libs</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Mapbox GL JS, Leaflet, Turf.js</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Geo-Data Tools</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">QGIS, GeoPandas, Shapely</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">APIs & Scripts</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Google Maps Elevation API, Sentinel NDVI Indexing</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Supported Layers</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">NDVI, NDWI, EVI, Soil moisture</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Analytics Overlays</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Crop health segmentation, water stress</p></div>
+              </div>
+            </div>
+          </details>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+              <summary className="flex items-center justify-between cursor-pointer p-6">
+                <div className="flex items-center gap-4">
+                  <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">cloud_sync</span>
+                  <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">DevOps / Cloud</h3>
+                </div>
+                <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+              </summary>
+              <div className="details-content">
+                <div className="px-6 pb-6 pt-0 space-y-4 text-left">
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Cloud Platform</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">AWS, Google Cloud (multi-cloud)</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">CI/CD</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">GitHub Actions, GitLab CI</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Containerization</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Docker, Kubernetes</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Monitoring</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Prometheus, Grafana, OpenTelemetry</p></div>
+                </div>
+              </div>
+            </details>
+            <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+              <summary className="flex items-center justify-between cursor-pointer p-6">
+                <div className="flex items-center gap-4">
+                  <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">security</span>
+                  <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Security</h3>
+                </div>
+                <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+              </summary>
+              <div className="details-content">
+                <div className="px-6 pb-6 pt-0 space-y-4 text-left">
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Access Control</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Supabase RLS, JWT + OAuth2</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Protection</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Rate limiting, AES-256 encryption, WAF</p></div>
+                  <div><h4 className="font-bold text-deep-grey dark:text-white/90">Compliance</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">ISO 27001-ready, Govt-grade role separation</p></div>
+                </div>
+              </div>
+            </details>
+          </div>
+          <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+            <summary className="flex items-center justify-between cursor-pointer p-6">
+              <div className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">monitoring</span>
+                <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Visualization + BI</h3>
+              </div>
+              <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+            </summary>
+            <div className="details-content">
+              <div className="px-6 pb-6 pt-0 flex flex-wrap gap-x-8 gap-y-4 text-left">
+                <span className="text-sm font-medium text-deep-grey/80 dark:text-white/70 bg-primary/10 dark:bg-light-green/10 px-3 py-1 rounded-full">Apache ECharts</span>
+                <span className="text-sm font-medium text-deep-grey/80 dark:text-white/70 bg-primary/10 dark:bg-light-green/10 px-3 py-1 rounded-full">D3.js</span>
+                <span className="text-sm font-medium text-deep-grey/80 dark:text-white/70 bg-primary/10 dark:bg-light-green/10 px-3 py-1 rounded-full">Metabase</span>
+                <span className="text-sm font-medium text-deep-grey/80 dark:text-white/70 bg-primary/10 dark:bg-light-green/10 px-3 py-1 rounded-full">Grafana</span>
+                <span className="text-sm font-medium text-deep-grey/80 dark:text-white/70 bg-primary/10 dark:bg-light-green/10 px-3 py-1 rounded-full">Kepler.gl</span>
+              </div>
+            </div>
+          </details>
+          <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+            <summary className="flex items-center justify-between cursor-pointer p-6">
+              <div className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">hub</span>
+                <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">External Integrations</h3>
+              </div>
+              <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+            </summary>
+            <div className="details-content">
+              <div className="px-6 pb-6 pt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 text-left">
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Satellite Providers</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">ISRO Bhuvan, Sentinel, Landsat, MODIS</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Weather Data</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">IMD, OpenWeatherMap, Tomorrow.io</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Market Data</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">AgMarkNet, APMC APIs</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Financial Integrations</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Bank APIs, Aadhaar eKYC, Insurance APIs</p></div>
+              </div>
+            </div>
+          </details>
+          <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
+            <summary className="flex items-center justify-between cursor-pointer p-6">
+              <div className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary dark:text-light-green text-3xl">grain</span>
+                <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Microservices Architecture</h3>
+              </div>
+              <span className="material-symbols-outlined text-deep-grey dark:text-white/70 transition-transform duration-300 plus-icon">add</span>
+            </summary>
+            <div className="details-content">
+              <div className="px-6 pb-6 pt-0 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-left">
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Services</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">User Service, Geo-processing Service, Analytics Service, Notification Service</p></div>
+                <div><h4 className="font-bold text-deep-grey dark:text-white/90">Event Bus</h4><p className="text-sm text-deep-grey/80 dark:text-white/70 font-soft mt-1">Kafka / Redpanda</p></div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  );
 }

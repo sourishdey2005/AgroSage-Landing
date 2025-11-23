@@ -1,16 +1,5 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import Logo from '@/components/logo';
-import { cn } from '@/lib/utils';
-import { Menu, X } from 'lucide-react';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import Link from "next/link";
+import Logo from "../logo";
 
 const menuItems = [
   { name: 'Home', href: '#home' },
@@ -21,90 +10,26 @@ const menuItems = [
 ];
 
 export default function Navigation() {
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <header
-      className={cn(
-        'sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm transition-shadow',
-        hasScrolled ? 'shadow-md shadow-black/10' : ''
-      )}
-    >
-      <div className="container mx-auto flex h-20 items-center justify-between">
-        <Link href="#home">
+    <header className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md shadow-lg shadow-black/[0.03] dark:shadow-black/[0.1]">
+      <div className="container mx-auto max-w-7xl px-4">
+        <div className="flex items-center justify-between h-20">
           <Logo />
-        </Link>
-        <nav className="hidden items-center gap-8 md:flex">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="font-body text-sm font-semibold text-foreground/80 transition-colors hover:text-foreground"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
-        <div className="hidden items-center gap-4 md:flex">
-          <Button
-            asChild
-            className="rounded-full bg-primary font-bold text-primary-foreground"
-          >
-            <Link href="https://agro-wise-sigma.vercel.app/login" target="_blank" rel="noopener noreferrer">
-              Get Started
-            </Link>
-          </Button>
-        </div>
-        <div className="md:hidden">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-background">
-              <div className="p-6">
-                <div className="mb-8 flex justify-between items-center">
-                  <Logo />
-                   <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                      <X className="h-6 w-6" />
-                      <span className="sr-only">Close menu</span>
-                    </Button>
-                </div>
-                <nav className="flex flex-col gap-6">
-                  {menuItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-lg font-semibold text-foreground/80 transition-colors hover:text-foreground"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </nav>
-                <Button
-                  asChild
-                  size="lg"
-                  className="mt-8 w-full rounded-full bg-primary font-bold text-primary-foreground"
-                >
-                  <Link href="https://agro-wise-sigma.vercel.app/login" target="_blank" rel="noopener noreferrer">
-                    Get Started
-                  </Link>
-                </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <nav className="hidden md:flex items-center gap-10">
+            {menuItems.map((item) => (
+              <Link key={item.name} href={item.href} className="nav-link text-sm font-medium text-deep-grey/80 dark:text-white/70 hover:text-primary dark:hover:text-light-green transition-colors">
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+          <Link href="https://agro-wise-sigma.vercel.app/login" target="_blank" rel="noopener noreferrer" className="hidden md:flex">
+            <button className="min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 px-6 bg-gradient-to-r from-primary to-green-600 text-white text-sm font-bold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-0.5">
+              <span className="truncate">Get Started</span>
+            </button>
+          </Link>
+          <button className="md:hidden flex items-center justify-center text-deep-grey dark:text-white">
+            <span className="material-symbols-outlined text-3xl">menu</span>
+          </button>
         </div>
       </div>
     </header>

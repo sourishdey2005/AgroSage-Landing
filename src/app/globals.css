@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-    --card: 210 40% 98%;
+    --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-    --popover: 210 40% 98%;
+    --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 142.1 76.2% 36.3%;
     --primary-foreground: 355.7 100% 97.3%;
@@ -16,7 +16,7 @@
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
+    --accent: 122 39% 49%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -25,38 +25,36 @@
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
 
-    --chart-1: 142.1 76.2% 36.3%;
-    --chart-2: 142.1 76.2% 46.3%;
-    --chart-3: 142.1 76.2% 56.3%;
-    --chart-4: 142.1 76.2% 66.3%;
-    --chart-5: 142.1 76.2% 76.3%;
+    --background-light: 0 0% 100%;
+    --background-dark: 240 5% 6.7%;
+    --deep-grey: 210 10% 23%;
+    --soft-yellow: 48 100% 94%;
+    --light-green: 125 44% 69%;
   }
 
   .dark {
-    --background: 220 20% 5%;
+    --background: 240 5% 6.7%;
     --foreground: 210 40% 98%;
-    --card: 220 20% 10%;
+    --card: 222.2 8.3% 12.2%;
     --card-foreground: 210 40% 98%;
-    --popover: 220 20% 5%;
+    --popover: 240 5% 6.7%;
     --popover-foreground: 210 40% 98%;
-    --primary: 142.1 76.2% 36.3%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 142.1 76.2% 36.3%;
-    --secondary-foreground: 355.7 100% 97.3%;
-    --muted: 220 20% 12%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-    --accent: 142.1 76.2% 36.3%;
-    --accent-foreground: 355.7 100% 97.3%;
+    --primary: 125 44% 69%;
+    --primary-foreground: 144 60% 15%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 125 44% 69%;
+    --accent-foreground: 144 60% 15%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 220 20% 15%;
-    --input: 220 20% 15%;
-    --ring: 142.1 76.2% 36.3%;
-    --chart-1: 142.1 76.2% 36.3%;
-    --chart-2: 142.1 76.2% 46.3%;
-    --chart-3: 142.1 76.2% 56.3%;
-    --chart-4: 142.1 76.2% 66.3%;
-    --chart-5: 142.1 76.2% 76.3%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 125 44% 69%;
+
+    --background-dark: 240 5% 6.7%;
+    --deep-grey: 210 10% 83%;
   }
 }
 
@@ -64,13 +62,96 @@
   * {
     @apply border-border;
   }
-  html {
-    @apply scroll-smooth;
-  }
   body {
     @apply bg-background text-foreground;
   }
-  section {
-    @apply w-full py-12 md:py-24 lg:py-32;
+  .bg-pattern {
+      background-image:
+          radial-gradient(circle at 1px 1px, rgba(46, 125, 50, 0.1) 1px, transparent 0);
+      background-size: 20px 20px;
+  }
+  .dark .bg-pattern {
+      background-image:
+          radial-gradient(circle at 1px 1px, rgba(165, 214, 167, 0.07) 1px, transparent 0);
+      background-size: 20px 20px;
+  }
+  .glow-effect::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(46, 125, 50, 0.2) 0%, rgba(46, 125, 50, 0) 70%);
+      transform: translate(-50%, -50%);
+      transition: opacity 0.5s ease;
+      opacity: 0;
+      z-index: -1;
+  }
+  .dark .glow-effect::before {
+      background: radial-gradient(circle, rgba(165, 214, 167, 0.15) 0%, rgba(165, 214, 167, 0) 70%);
+  }
+  .glow-effect:hover::before {
+      opacity: 1;
+  }
+  .nav-link {
+      position: relative;
+  }
+  .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background-color: #2E7D32;
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
+  }
+  .dark .nav-link::after {
+      background-color: #A5D6A7;
+  }
+  .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+  }
+  .tech-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 1.25rem;
+      padding: 2px;
+      background: linear-gradient(45deg, rgba(165, 214, 167, 0), rgba(165, 214, 167, 0.3), rgba(165, 214, 167, 0));
+      -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+  }
+  .tech-card:hover::after {
+      opacity: 1;
+  }
+  details summary::-webkit-details-marker {
+     display:none;
+  }
+  details > summary {
+      list-style: none;
+  }
+  details[open] .plus-icon {
+      transform: rotate(45deg);
+  }
+  details .details-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease-in-out;
+  }
+  details[open] .details-content {
+      grid-template-rows: 1fr;
+  }
+  .details-content > div {
+      overflow: hidden;
   }
 }
