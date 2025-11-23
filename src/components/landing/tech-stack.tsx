@@ -2,11 +2,11 @@ export default function TechStack() {
   return (
     <section className="py-24 bg-background-light dark:bg-black/20">
       <div className="container mx-auto max-w-5xl px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-deep-grey dark:text-white">Tech Stack</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-deep-grey/70 dark:text-white/60 font-soft">(2025-ready, scalable, AI-powered)</p>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <details className="group bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] transition-all duration-300 hover:shadow-primary/20 dark:hover:shadow-primary/20">
             <summary className="flex items-center justify-between cursor-pointer p-6">
               <div className="flex items-center gap-4">

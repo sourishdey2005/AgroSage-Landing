@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-transparent dark:from-background-dark dark:via-background-dark dark:to-transparent"></div>
       <div className="container relative mx-auto max-w-7xl px-4">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="inline-block self-start bg-soft-yellow text-deep-grey text-sm font-bold py-2 px-4 rounded-full font-soft shadow-sm">
               Trusted by 50,000+ Farmers
             </div>
@@ -30,7 +30,7 @@ export default function Hero() {
               </button>
             </div>
           </div>
-          <div className="relative w-full aspect-square rounded-xl shadow-2xl shadow-primary/10 dark:shadow-primary/20 group">
+          <div className="relative w-full aspect-square rounded-xl shadow-2xl shadow-primary/10 dark:shadow-primary/20 group animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Image 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAS39ffuUNtdrlfvAjDRjtoUdyjnMdOQVh0C7cwM6Be-CwR92mm4AeJ-5GyyCaMwRl_7AhSH5sADgsTTBjIe5s3G80E0dljMycLX9c5P9L8vGfoCUPXwJ23YANiKtaM8owWL-hTqIrMQJ4WHorpvEi0_8uqQ_zDqcLnef7jaG9utUfsB7uT3r2JvAItXNx3O9smRWB4OGH6WdRndZ7ehN1d66lc4S17FsobiQE__YuRD2xnOoRO-NYLLiYrdbqnsQh9XarZtelO7FQ"
               alt="A futuristic, glowing map of India with interconnected nodes representing farm hotspots, data points, and analytics."

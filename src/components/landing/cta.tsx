@@ -4,7 +4,7 @@ export default function Cta() {
   return (
     <section className="py-24">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="relative overflow-hidden bg-gradient-to-r from-primary to-green-600 rounded-xl p-10 md:p-20 text-center text-white shadow-2xl shadow-primary/30">
+        <div className="relative overflow-hidden bg-gradient-to-r from-primary to-green-600 rounded-xl p-10 md:p-20 text-center text-white shadow-2xl shadow-primary/30 animate-fade-in">
           <div className="absolute -top-1/2 -left-1/4 w-full h-[200%] bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_0%,_rgba(255,255,255,0)_50%)]"></div>
           <div className="relative">
             <h2 className="text-3xl md:text-5xl font-bold font-heading">Start Transforming Agriculture Today</h2>
