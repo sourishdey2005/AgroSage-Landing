@@ -8,7 +8,7 @@ const footerLinks = {
     { name: "Technology", href: "#technology" },
   ],
   Support: [
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
     { name: "Help Center", href: "/help-center" },
     { name: "API Docs", href: "/api-docs" },
   ],
