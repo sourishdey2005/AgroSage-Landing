@@ -12,6 +12,8 @@ import Cta from "@/components/landing/cta";
 import Footer from "@/components/landing/footer";
 import DataEngine from "@/components/landing/data-engine";
 import Testimonials from "@/components/landing/testimonials";
+import BlockchainFeatures from "@/components/landing/blockchain-features";
+import SubscriptionPlans from "@/components/landing/subscription-plans";
 
 export default function Home() {
   return (
@@ -29,6 +31,8 @@ export default function Home() {
         <TechStack />
         <Testimonials />
         <Team />
+        <BlockchainFeatures />
+        <SubscriptionPlans />
         <Cta />
       </main>
       <Footer />
