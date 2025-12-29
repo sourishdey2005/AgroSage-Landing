@@ -15,6 +15,7 @@ const plans = [
             "Community Forum Access",
         ],
         isRecommended: false,
+        buttonText: "Choose Plan"
     },
     {
         name: "Agri-Pro",
@@ -30,6 +31,23 @@ const plans = [
             "Priority Support"
         ],
         isRecommended: true,
+        buttonText: "Choose Plan"
+    },
+    {
+        name: "Enterprise",
+        price: "Custom",
+        priceSuffix: "",
+        description: "Tailored solutions for government, banks, and large co-ops.",
+        features: [
+            "All Agri-Pro Features",
+            "Custom AI Model Integration",
+            "Dedicated API Endpoints",
+            "On-Premise Deployment Options",
+            "Dedicated Account Manager",
+            "Custom SLA & Security Audits"
+        ],
+        isRecommended: false,
+        buttonText: "Contact Sales"
     }
 ];
 
@@ -46,11 +64,11 @@ export default function SubscriptionPlans() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start max-w-6xl mx-auto">
             {plans.map((plan, index) => (
                 <div 
                     key={plan.name} 
-                    className={`relative bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg border border-black/5 dark:border-white/10 p-8 flex flex-col animate-fade-in ${plan.isRecommended ? 'scale-105 border-primary dark:border-light-green shadow-primary/20 dark:shadow-light-green/10' : ''}`}
+                    className={`relative bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg border border-black/5 dark:border-white/10 p-8 flex flex-col h-full animate-fade-in ${plan.isRecommended ? 'scale-105 border-primary dark:border-light-green shadow-primary/20 dark:shadow-light-green/10' : ''}`}
                     style={{ animationDelay: `${0.2 * (index + 1)}s` }}
                 >
                     {plan.isRecommended && (
@@ -62,9 +80,9 @@ export default function SubscriptionPlans() {
                     )}
                     <div className="flex-grow">
                         <h3 className="text-2xl font-bold font-heading text-deep-grey dark:text-white">{plan.name}</h3>
-                        <p className="mt-2 text-deep-grey/70 dark:text-white/60 font-soft">{plan.description}</p>
+                        <p className="mt-2 text-deep-grey/70 dark:text-white/60 font-soft h-12">{plan.description}</p>
                         <div className="my-8">
-                            <span className="text-5xl font-black font-heading text-deep-grey dark:text-white">₹{plan.price}</span>
+                            <span className="text-5xl font-black font-heading text-deep-grey dark:text-white">{typeof plan.price === 'number' ? `₹${plan.price}`: plan.price}</span>
                             <span className="text-lg font-medium text-deep-grey/60 dark:text-white/50">{plan.priceSuffix}</span>
                         </div>
                         <ul className="space-y-4">
@@ -80,7 +98,7 @@ export default function SubscriptionPlans() {
                         <Button 
                             className={`w-full h-12 text-base font-bold ${plan.isRecommended ? 'bg-primary hover:bg-green-700 text-white' : 'bg-primary/10 hover:bg-primary/20 text-primary dark:bg-light-green/10 dark:hover:bg-light-green/20 dark:text-light-green'}`}
                         >
-                            Choose Plan
+                            {plan.buttonText}
                         </Button>
                     </div>
                 </div>
