@@ -30,12 +30,12 @@ export default function Team() {
           <div className="group relative flex flex-col text-center p-8 bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] hover:shadow-2xl hover:shadow-primary/20 dark:hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="mb-4">
               <div className="size-24 mx-auto rounded-full bg-primary/10 dark:bg-light-green/10 flex items-center justify-center text-primary dark:text-light-green transition-all duration-300 group-hover:scale-110">
-                <span className="material-symbols-outlined text-5xl">database</span>
+                <span className="material-symbols-outlined text-5xl">code</span>
               </div>
             </div>
-            <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Himanshu Keshri</h3>
-            <p className="text-sm text-primary dark:text-light-green font-bold mt-1">KIIT Bhubaneswar, Lead Backend & Data Engineer</p>
-            <p className="mt-4 text-deep-grey/80 dark:text-white/70 font-soft text-base flex-grow">Himanshu leads the development of our platform's backend and data engineering pipelines. He focuses on building a scalable, secure, and robust infrastructure capable of handling vast amounts of geospatial and agricultural data.</p>
+            <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Nitish Kumar Pandit</h3>
+            <p className="text-sm text-primary dark:text-light-green font-bold mt-1">School of Computer Eng., Full Stack – Developer</p>
+            <p className="mt-4 text-deep-grey/80 dark:text-white/70 font-soft text-base flex-grow">Nitish is the driving force behind the platform's user interface and overall experience. As the Full Stack Developer, he masterfully crafts the responsive front-end and robust back-end, ensuring a seamless and intuitive application for all users.</p>
           </div>
         </div>
       </div>
