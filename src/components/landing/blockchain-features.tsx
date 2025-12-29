@@ -10,7 +10,7 @@ export default function BlockchainFeatures() {
             Transparent & Secure with Blockchain
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-deep-grey/70 dark:text-white/60 font-soft">
-            Simulating real-world trust and transparency on the chain.
+            Leveraging blockchain for real-world trust and transparency on the chain.
           </p>
         </div>
 
