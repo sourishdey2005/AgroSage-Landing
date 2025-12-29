@@ -14,7 +14,7 @@ const testimonials = [
     name: 'Rajinder Singh',
     role: 'Farmer, Punjab',
     quote:
-      'AgroSage helped me increase my wheat yield by 15% this season. The weather alerts are incredibly accurate and saved my crop from untimely rain. It feels like having an expert in my pocket.',
+      'Krishi Mitra AI helped me increase my wheat yield by 15% this season. The weather alerts are incredibly accurate and saved my crop from untimely rain. It feels like having an expert in my pocket.',
   },
   {
     id: 'testimonial-manager',
@@ -48,7 +48,7 @@ export default function Testimonials() {
             Voices from the Field
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-deep-grey/70 dark:text-white/60 font-soft">
-            See how AgroSage is making a real-world impact across India.
+            See how Krishi Mitra AI is making a real-world impact across India.
           </p>
         </div>
 

@@ -46,7 +46,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-16 pt-8 border-t border-black/5 dark:border-white/5 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-deep-grey/60 dark:text-white/50 font-soft">© {new Date().getFullYear()} AgroSage. All rights reserved.</p>
+          <p className="text-sm text-deep-grey/60 dark:text-white/50 font-soft">© {new Date().getFullYear()} Krishi Mitra AI. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 sm:mt-0">
           </div>
         </div>

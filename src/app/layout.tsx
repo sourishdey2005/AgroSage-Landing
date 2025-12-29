@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'AgroSage: India’s Smartest Agriculture Intelligence Platform',
+  title: 'Krishi Mitra AI: India’s Smartest Agriculture Intelligence Platform',
   description: 'AI-powered insights for Farmers, Banks, Agents & Government.',
 };
 

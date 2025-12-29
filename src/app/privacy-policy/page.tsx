@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
           </div>
 
           <div className="prose dark:prose-invert max-w-none text-deep-grey/80 dark:text-white/70 font-soft text-lg space-y-6">
-            <p>Welcome to AgroSage. We are committed to protecting your privacy and handling your data in an open and transparent manner. This privacy policy sets out how we collect, use, and protect any information that you give us when you use this platform.</p>
+            <p>Welcome to Krishi Mitra AI. We are committed to protecting your privacy and handling your data in an open and transparent manner. This privacy policy sets out how we collect, use, and protect any information that you give us when you use this platform.</p>
             
             <h2 className="text-2xl font-bold font-heading text-deep-grey dark:text-white">1. Information We Collect</h2>
             <p>We may collect the following information:</p>

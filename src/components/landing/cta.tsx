@@ -11,7 +11,7 @@ export default function Cta() {
             <p className="mt-4 max-w-xl mx-auto opacity-80 font-soft text-lg">Join the digital revolution and empower your agricultural decisions with the power of AI.</p>
             <Link href="https://agro-wise-sigma.vercel.app/login" target="_blank" rel="noopener noreferrer">
               <button className="mt-8 flex mx-auto min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-10 bg-white text-primary text-lg font-bold shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                <span className="truncate">Join AgroSage</span>
+                <span className="truncate">Join Krishi Mitra AI</span>
               </button>
             </Link>
             <p className="text-sm mt-4 opacity-70 font-soft">Free for Farmers • Secure for Banks • Verified for Government</p>

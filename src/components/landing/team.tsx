@@ -4,7 +4,7 @@ export default function Team() {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-deep-grey dark:text-white">Our Team</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-deep-grey/70 dark:text-white/60 font-soft">The minds behind AgroSage from KIIT Bhubaneswar.</p>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-deep-grey/70 dark:text-white/60 font-soft">The minds behind Krishi Mitra AI from KIIT Bhubaneswar.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="group relative flex flex-col text-center p-8 bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] hover:shadow-2xl hover:shadow-primary/20 dark:hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -15,7 +15,7 @@ export default function Team() {
             </div>
             <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Sunil Kumar Sawant</h3>
             <p className="text-sm text-primary dark:text-light-green font-bold mt-1">Mentor</p>
-            <p className="mt-4 text-deep-grey/80 dark:text-white/70 font-soft text-base flex-grow">With over 20 years of experience in agricultural technology and data science, Sunil guides the AgroSage team, providing strategic direction and deep industry insights to bridge the gap between technology and on-the-ground farming realities.</p>
+            <p className="mt-4 text-deep-grey/80 dark:text-white/70 font-soft text-base flex-grow">With over 20 years of experience in agricultural technology and data science, Sunil guides the Krishi Mitra AI team, providing strategic direction and deep industry insights to bridge the gap between technology and on-the-ground farming realities.</p>
           </div>
           <div className="group relative flex flex-col text-center p-8 bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] hover:shadow-2xl hover:shadow-primary/20 dark:hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="mb-4">

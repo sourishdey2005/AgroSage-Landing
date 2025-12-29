@@ -76,7 +76,7 @@ export default function ApiDocs() {
               API Documentation
             </h1>
             <p className="max-w-[600px] mx-auto text-deep-grey/70 dark:text-white/60 md:text-xl mt-4 font-soft">
-              Integrate AgroSage's intelligence into your own applications.
+              Integrate Krishi Mitra AI's intelligence into your own applications.
             </p>
           </div>
 

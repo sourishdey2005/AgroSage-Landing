@@ -10,7 +10,7 @@ const Logo = ({ className }: { className?: string }) => {
           <path d="M26 12V22H36V26H26V36H22V26H12V22H22V12H26Z" fill="#2E7D32"></path>
         </svg>
       </div>
-      <h2 className="text-deep-grey dark:text-white text-2xl font-heading font-bold">AgroSage</h2>
+      <h2 className="text-deep-grey dark:text-white text-2xl font-heading font-bold">Krishi Mitra AI</h2>
     </div>
   );
 };

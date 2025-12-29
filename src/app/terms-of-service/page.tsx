@@ -26,19 +26,19 @@ export default function TermsOfService() {
 
           <div className="prose dark:prose-invert max-w-none text-deep-grey/80 dark:text-white/70 font-soft text-lg space-y-6">
             <h2 className="text-2xl font-bold font-heading text-deep-grey dark:text-white">1. Acceptance of Terms</h2>
-            <p>By accessing and using the AgroSage platform ("Service"), you accept and agree to be bound by the terms and provision of this agreement. In addition, when using these particular services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
+            <p>By accessing and using the Krishi Mitra AI platform ("Service"), you accept and agree to be bound by the terms and provision of this agreement. In addition, when using these particular services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
 
             <h2 className="text-2xl font-bold font-heading text-deep-grey dark:text-white">2. Description of Service</h2>
-            <p>AgroSage provides users with access to an agricultural intelligence platform. The Service is provided "as is" and we assume no responsibility for the timeliness, deletion, mis-delivery or failure to store any user communications or personalization settings.</p>
+            <p>Krishi Mitra AI provides users with access to an agricultural intelligence platform. The Service is provided "as is" and we assume no responsibility for the timeliness, deletion, mis-delivery or failure to store any user communications or personalization settings.</p>
 
             <h2 className="text-2xl font-bold font-heading text-deep-grey dark:text-white">3. User Conduct</h2>
             <p>You are responsible for all activity that occurs under your account. You agree not to use the Service to upload, post, email, transmit, or otherwise make available any content that is unlawful, harmful, threatening, abusive, harassing, or otherwise objectionable.</p>
             
             <h2 className="text-2xl font-bold font-heading text-deep-grey dark:text-white">4. Disclaimer of Warranties</h2>
-            <p>The service is provided on an "as is" and "as available" basis. AgroSage expressly disclaims all warranties of any kind, whether express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose and non-infringement. The insights and predictions provided are for informational purposes only and should not be considered as financial or agricultural advice.</p>
+            <p>The service is provided on an "as is" and "as available" basis. Krishi Mitra AI expressly disclaims all warranties of any kind, whether express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose and non-infringement. The insights and predictions provided are for informational purposes only and should not be considered as financial or agricultural advice.</p>
             
             <h2 className="text-2xl font-bold font-heading text-deep-grey dark:text-white">5. Limitation of Liability</h2>
-            <p>In no event shall AgroSage or its suppliers be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or the inability to use the service or for the cost of procurement of substitute goods and services.</p>
+            <p>In no event shall Krishi Mitra AI or its suppliers be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or the inability to use the service or for the cost of procurement of substitute goods and services.</p>
           </div>
         </div>
       </main>

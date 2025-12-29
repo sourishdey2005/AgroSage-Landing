@@ -6,11 +6,11 @@ import Logo from "@/components/logo";
 
 const faqs = [
   {
-    question: "What is AgroSage?",
-    answer: "AgroSage is an AI-powered agricultural intelligence platform that provides data-driven insights to farmers, banks, field agents, and government bodies to improve decision-making across the agricultural value chain."
+    question: "What is Krishi Mitra AI?",
+    answer: "Krishi Mitra AI is an AI-powered agricultural intelligence platform that provides data-driven insights to farmers, banks, field agents, and government bodies to improve decision-making across the agricultural value chain."
   },
   {
-    question: "Who can use AgroSage?",
+    question: "Who can use Krishi Mitra AI?",
     answer: "Our platform is designed for all stakeholders in the agricultural ecosystem: farmers who want to improve yields, field agents for data collection, banks for loan risk assessment, and government agencies for policy-making and monitoring."
   },
   {
@@ -18,7 +18,7 @@ const faqs = [
     answer: "Our AI Yield Predictor uses a combination of machine learning models that analyze satellite imagery, historical weather patterns, soil type, and crop data to forecast yields with high accuracy."
   },
   {
-    question: "Is my data secure with AgroSage?",
+    question: "Is my data secure with Krishi Mitra AI?",
     answer: "Yes, data security is our top priority. We use industry-standard encryption, role-based access control, and follow best practices to ensure your data is safe and private."
   },
   {
@@ -51,7 +51,7 @@ export default function HelpCenter() {
               Help Center
             </h1>
             <p className="max-w-[600px] mx-auto text-deep-grey/70 dark:text-white/60 md:text-xl mt-4 font-soft">
-              Find answers to common questions about AgroSage.
+              Find answers to common questions about Krishi Mitra AI.
             </p>
           </div>
 
