@@ -23,12 +23,12 @@ export default function Team() {
           <div className="group relative flex flex-col text-center p-8 bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] hover:shadow-2xl hover:shadow-primary/20 dark:hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="mb-4">
               <div className="size-24 mx-auto rounded-full bg-primary/10 dark:bg-light-green/10 flex items-center justify-center text-primary dark:text-light-green transition-all duration-300 group-hover:scale-110">
-                <span className="material-symbols-outlined text-5xl">psychology</span>
+                <span className="material-symbols-outlined text-5xl">analytics</span>
               </div>
             </div>
             <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Sourish Dey</h3>
-            <p className="text-sm text-primary dark:text-light-green font-bold mt-1">KIIT Bhubaneswar, Lead AI/ML Architect</p>
-            <p className="mt-4 text-deep-grey/80 dark:text-white/70 font-soft text-base flex-grow">As the lead architect of our AI and machine learning models, Sourish specializes in developing predictive analytics for crop yield and risk assessment. His work is pivotal in turning complex data into actionable insights for farmers.</p>
+            <p className="text-sm text-primary dark:text-light-green font-bold mt-1">School of Computer Eng.; AI ML, Data Analyst</p>
+            <p className="mt-4 text-deep-grey/80 dark:text-white/70 font-soft text-base flex-grow">As a data analyst, Sourish is focused on interpreting complex agricultural data to uncover trends and insights. His work is crucial for refining our AI models and ensuring the accuracy of the analytics we provide to our users.</p>
           </div>
           <div className="group relative flex flex-col text-center p-8 bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] hover:shadow-2xl hover:shadow-primary/20 dark:hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="mb-4">
