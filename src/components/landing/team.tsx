@@ -13,9 +13,9 @@ export default function Team() {
                 <span className="material-symbols-outlined text-5xl">school</span>
               </div>
             </div>
-            <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Sunil Kumar Sawant</h3>
+            <h3 className="text-xl font-bold font-heading text-deep-grey dark:text-white">Ms. Kajal Kishori</h3>
             <p className="text-sm text-primary dark:text-light-green font-bold mt-1">Mentor</p>
-            <p className="mt-4 text-deep-grey/80 dark:text-white/70 font-soft text-base flex-grow">With over 20 years of experience in agricultural technology and data science, Sunil guides the Krishi Mitra AI team, providing strategic direction and deep industry insights to bridge the gap between technology and on-the-ground farming realities.</p>
+            <p className="mt-4 text-deep-grey/80 dark:text-white/70 font-soft text-base flex-grow">As a seasoned expert in agricultural policy and rural development, Ms. Kishori provides invaluable mentorship to the Krishi Mitra AI team. Her deep understanding of the agricultural ecosystem ensures our technology is aligned with the real-world needs of farmers and policymakers.</p>
           </div>
           <div className="group relative flex flex-col text-center p-8 bg-white dark:bg-deep-grey/20 rounded-xl shadow-lg shadow-black/[0.04] hover:shadow-2xl hover:shadow-primary/20 dark:hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="mb-4">
