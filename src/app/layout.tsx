@@ -5,7 +5,8 @@ import ScrollToTop from '@/components/scroll-to-top';
 
 export const metadata: Metadata = {
   title: 'Krishi Mitra AI: India’s Smartest Agriculture Intelligence Platform',
-  description: 'AI-powered insights for Farmers, Banks, Agents & Government.',
+  description: 'AI-powered insights for Farmers, Banks, Agents & Government. Transforming Indian agriculture with precision data and blockchain transparency.',
+  keywords: 'agriculture AI, crop yield prediction, Indian farmers, agritech, blockchain agriculture, satellite monitoring',
 };
 
 export default function RootLayout({

@@ -2,6 +2,11 @@
 
 ### India’s Smartest Agriculture Intelligence Platform
 
+[![Next.js 15](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-v11-FFCA28?logo=firebase)](https://firebase.google.com/)
+[![Genkit](https://img.shields.io/badge/Google_Genkit-AI-4285F4?logo=google)](https://firebase.google.com/docs/genkit)
+
 **Krishi Mitra AI** is a cutting-edge, data-driven intelligence layer for the Indian agricultural ecosystem. By fusing geospatial data, satellite imagery, and advanced AI models, we empower farmers, financial institutions, and government bodies with actionable insights to transform decision-making from "guesswork" to "precision."
 
 ---
@@ -30,13 +35,14 @@ Built with a modern, scalable, and professional architecture (2025-ready):
 
 ---
 
-## 👨‍💻 Our Team
+## 👨‍💻 Lead Developer
 
-**Krishi Mitra AI** is led by a multi-disciplinary team from **KIIT Bhubaneswar**.
+**Sourish Dey**
+*Data Scientist | Quant Finance | Software Developer | Quantum Computing*
 
-- **Sourish Dey** (Data Scientist, Quant Finance & Quantum Computing Enthusiast)
-  - Role: Lead AI/ML Architect & Data Strategy
-  - [Portfolio](https://sourishdeyportfolio.vercel.app/)
+Sourish is a versatile professional with expertise in Data Science, Quant Finance, and Software Development. He is also deeply involved in exploring the potential of Quantum Computing, bringing a unique, multi-disciplinary approach to solving complex analytical challenges and building high-performance systems.
+
+[Portfolio](https://sourishdeyportfolio.vercel.app/)
 
 ---
 
@@ -91,4 +97,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Developed with ❤️ for the Indian Farmer.
+Developed with ❤️ for the Indian Farmer at KIIT Bhubaneswar.
