@@ -1,12 +1,5 @@
 'use client';
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
@@ -14,9 +7,9 @@ import { ExternalLink } from 'lucide-react';
 const teamMembers = [
   {
     name: "Sourish Dey",
-    role: "School of Computer Eng.; AI ML, Data Analyst",
-    bio: "As a data analyst, Sourish is focused on interpreting complex agricultural data to uncover trends and insights. His work is crucial for refining our AI models and ensuring the accuracy of the analytics we provide to our users.",
-    icon: "analytics",
+    role: "School of Computer Eng.; Data Scientist, Quant Finance & Quantum Computing",
+    bio: "Sourish is a versatile professional with expertise in Data Science, Quant Finance, and Software Development. He is also deeply involved in exploring the potential of Quantum Computing, bringing a unique, multi-disciplinary approach to solving complex analytical challenges and building high-performance systems.",
+    icon: "psychology",
     portfolioUrl: "https://sourishdeyportfolio.vercel.app/"
   }
 ]
